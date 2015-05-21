@@ -27,3 +27,10 @@ body {
   color: #000;
   padding: 0.2em 0;
 }
+
+.datos-personales{
+  background-color: #A7EFEA;
+}
+.obligatorio{
+  color: red;
+}
