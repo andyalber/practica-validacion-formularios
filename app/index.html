@@ -15,7 +15,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- Aqui va el plugin para poner un calendario en el formulario -->
-    
+
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -28,82 +28,98 @@
     </div>
     <div class="container">
         <div class="row datos-personales">
-            <div class="col-md-12">
-                <h2>Datos Personales</h2>
-                <form class="form-horizontal" role="form" id="datos_personales">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="nombre">Nombre<span class="obligatorio">*</span>:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Pon tu nombre">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="apellido1">Primer apellido<span class="obligatorio">*</span>:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="apellido1" id="apellido1" placeholder="Pon tu primer apellido">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="apellido2">Segundo apellido:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="apellido2" id="apellido2" placeholder="Pon tu segundo apellido">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="tipo-documento">Tipo de documento<span class="obligatorio">*</span>:</label>
-                        </label>
-                        <div class="col-sm-10">
-                            <select class="selectpicker" id="tipodocumento">
-                                <option value selected="selected">Seleccione una opcion</option>
-                                <option value="dni">DNI español</option>
-                                <option value="nacional">Carné nacional de Identidad</option>
-                                <option value="pasaporte">Pasaporte</option>
-                                <option value="residente">Tarjeta Residente en España</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="document_num">Número de documento <span class="obligatorio">*</span>:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="document_num" id="document_num" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> Remember me</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="tipo-documento">Fecha de nacimiento<span class="obligatorio">*</span>:</label>
-                        </label>
-                        <div class="col-sm-10">
-                            <div class="container">
-                                <div class="row">
-                                    <div class='col-sm-6'>
-                                        <div class="form-group">
-                                            <div class='input-group date' id='datetimepicker1'>
-                                                <input type='text' class="form-control" />
-                                                <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </div>
-                    </div>
-                </form>
+    <div class="col-md-12">
+        <h2>Datos Personales</h2>
+        <form class="form-horizontal" role="form" id="datos_personales">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nombre">Nombre<span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Pon tu nombre">
+                </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="apellido1">Primer apellido<span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="apellido1" id="apellido1" placeholder="Pon tu primer apellido">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="apellido2">Segundo apellido:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="apellido2" id="apellido2" placeholder="Pon tu segundo apellido">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">e-mail<span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Escribe tu e-mail">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email2">Confirma e-mail<span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="email2" id="email2" placeholder="Repite tu e-mail">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="conoce">¿Cómo nos conociste?:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="conoce" name="conoce">
+                        <option selected value="No contesta"> Prefiero no contestar</option>
+                        <option value="Publicidad">Publicidad</option>
+                        <option value="Profesionales">Profesionales del sector</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Amigo">A través de un amigo o conocido</option>
+                    </select>
+                </div>
+            </div>
+            
+
+            
+    
+    
+        <h2>Datos de Facturacion</h2>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="demandante">Demandante:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="demandante" name="demandante">
+                        <option selected value=0>--</option>
+                        <option value=1>Particular</option>
+                        <option value=2>Empresa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="dni">CIF / NIF <span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="dni" id="dni" placeholder="Escriba su CIF o NIF">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="direccion">Dirección<span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Escribe tu direccion">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="CodPostal">Código Postal<span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="CodPostal" id="CodPostal" placeholder="Pon tu código postal">
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
     </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -118,8 +134,9 @@
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/main.js"></script>
     <script src="scripts/valida.js"></script>
+    <script src="scripts/valida-extendido.js"></script>
     <!--<script src="scripts/calendario.js"></script>-->
-    
+
     <!-- endbuild -->
 </body>
 
