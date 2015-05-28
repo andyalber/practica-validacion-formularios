@@ -1,5 +1,26 @@
 'use strict';
 $(document).ready(function() {
+    /* Rellena el codigo postal con 0 */
+    $('#CodPostal').on("focusout", function(){
+        var codpostal = document.getElementById('CodPostal').value;
+        var postalformateado = ("0000" + codpostal).slice (-5);
+        document.getElementById('CodPostal').value= postalformateado;
+        /* Comprueba si el codigo postal es español*/
+        
+        /*$.ajax({
+			url: 'http://localhost/juanda/proyecto_ajax/validar_CodPostal_db.php',
+			type: 'GET',
+			dataType: 'json'
+		})*/
+        
+            
+			
+	});
+        
+    
+    
+    
+    
 	$('#datos_personales').validate(
         {
             rules: 
@@ -45,8 +66,44 @@ $(document).ready(function() {
                 CodPostal:
                 {
                     required: true,
+                    maxlength: 5,
+                    number: true,
                     remote: 'http://localhost/juanda/proyecto_ajax/validar_CodPostal_db.php'
+                },
+                localidad:
+                {
+                    required: true
+                },
+                provincia:
+                {
+                    required: true
+                },
+                pais:
+                {
+                    required: true
+                },
+                iban:
+                {
+                    required: true
+                },
+                formapago:
+                {
+                    min: 1
+                },
+                usuario:
+                {
+                    required: 'true'
+                },
+                password:
+                {
+                    required: 'true'
+                },
+                password2:
+                {
+                    required: 'true',
+                    equalTo: '#password'
                 }
+                
             },
             messages: {
                 nombre:
@@ -88,7 +145,42 @@ $(document).ready(function() {
                 CodPostal:
                 {
                     required: 'Debes escribir tu Código Postal',
-                    remote: ''
+                    maxlength: 'Máximo 5 digitos',
+                    remote: 'Ese codigo postal no es de España.',
+                    number: 'Debe ser numérico'
+                },
+                localidad:
+                {
+                    required: 'Debes escribir tu localidad'
+                },
+                provincia:
+                {
+                    required: 'Debes escribir tu provincia'
+                },
+                pais:
+                {
+                    required: 'Debes escribir tu pais'
+                },
+                iban:
+                {
+                    required: 'IBAN requerido'
+                },
+                formapago:
+                {
+                    min: 'Elija forma de pago'
+                },
+                usuario:
+                {
+                    required: 'Usuario requerido'
+                },
+                password:
+                {
+                    required: 'Contraseña requerida'
+                },
+                password2:
+                {
+                    required: 'Debes validar la contraseña',
+                    equalTo: 'Las contraseñas no coinciden'
                 }
             }
             
