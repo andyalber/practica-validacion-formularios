@@ -83,8 +83,7 @@
                 <label class="control-label col-sm-2" for="demandante">Demandante:</label>
                 <div class="col-sm-10">
                     <select class="form-control" id="demandante" name="demandante">
-                        <option selected value=0>--</option>
-                        <option value=1>Particular</option>
+                        <option selected value=1>Particular</option>
                         <option value=2>Empresa</option>
                     </select>
                 </div>
@@ -93,6 +92,12 @@
                 <label class="control-label col-sm-2" for="dni">CIF / NIF <span class="obligatorio">*</span>:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="dni" id="dni" placeholder="Escriba su CIF o NIF">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="empresa">Empresa<span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="empresa" id="empresa" placeholder="Nombre de la empresa">
                 </div>
             </div>
             <div class="form-group">
@@ -125,14 +130,31 @@
                     <input type="text" class="form-control" name="pais" id="pais" placeholder="Escribe tu Pais">
                 </div>
             </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="iban">IBAN<span class="obligatorio">*</span>:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="iban" id="iban" placeholder="Escribe tu Pais">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="formapago">Método de pago:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="formapago" name="formapago">
+                        <option selected value="0"> -- </option>
+                        <option value=1>Mensual</option>
+                        <option value=2>Trimestral</option>
+                        <option value=3>Anual</option>
+                    </select>
+                </div>
+            </div>
             
             
             
             <h2>Datos de acceso:</h2>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="usuario">Usuario<span class="obligatorio">*</span>:</label>
+                <label class="control-label col-sm-2" for="user">Usuario<span class="obligatorio">*</span>:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="usuario" id="usuario" disabled>
+                    <input type="text" class="form-control" name="user" id="user" placeholder="Rellene el email">
                 </div>
             </div>
             <div class="form-group">
@@ -171,6 +193,10 @@
     <!-- endbuild -->
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/nifEs.js"></script>
+    <script src="scripts/cifES.js"></script>
+    <script src="scripts/iban.js"></script>
+    <script src="scripts/cifonif.js"></script>
     <script src="scripts/valida.js"></script>
     <script src="scripts/valida-extendido.js"></script>
     <!--<script src="scripts/calendario.js"></script>-->

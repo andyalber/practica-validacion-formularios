@@ -90,17 +90,17 @@ $(document).ready(function() {
                 {
                     min: 1
                 },
-                usuario:
+                user:
                 {
-                    required: 'true'
+                    required: true
                 },
                 password:
                 {
-                    required: 'true'
+                    required: true
                 },
                 password2:
                 {
-                    required: 'true',
+                    required: true,
                     equalTo: '#password'
                 }
                 
@@ -135,8 +135,9 @@ $(document).ready(function() {
                 },
                 dni:
                 {
-                    nifES: 'Debes escribir un NIF válido',
-                    required: 'Debes escribir tu CIF / NIF'
+                    required: 'Debes escribir tu CIF / NIF',
+                    nifES: 'Debes escribir un NIF válido'
+                    
                 },
                 direccion:
                 {
@@ -169,7 +170,7 @@ $(document).ready(function() {
                 {
                     min: 'Elija forma de pago'
                 },
-                usuario:
+                user:
                 {
                     required: 'Usuario requerido'
                 },
