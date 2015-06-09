@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 
 
-});
+//});
 
 
 
@@ -25,7 +25,6 @@ $('#datos_personales').validate({
 rules: {
     nombre: {
         required: true
-            //remote: 'http://localhost/juanda/proyecto_ajax/validar_nombre_db.php'
     },
     apellido: {
         required: true
@@ -40,6 +39,7 @@ rules: {
         email: true,
         required: true,
         remote: 'http://localhost/juanda/proyecto_ajax/validar_email_db.php',
+        //remote: 'php/validar_email_db.php',
         minlength: 4
     },
     email2: {
@@ -69,7 +69,7 @@ rules: {
         },
         required: true,
         remote: 'http://localhost/juanda/proyecto_ajax/validar_nif_db.php'
-            //remote: '../php/validar_nif_db.php'
+            //remote: 'php/validar_nif_db.php',
     },
     nomempresa: {
         required: true
@@ -82,7 +82,7 @@ rules: {
         maxlength: 5,
         number: true,
         remote: 'http://localhost/juanda/proyecto_ajax/validar_CodPostal_db.php'
-            //remote: '/validar_CodPostal_db.php'
+            //remote: 'php/validar_CodPostal_db.php',
     },
     localidad: {
         required: true
@@ -104,7 +104,8 @@ rules: {
         required: true
     },
     password: {
-        required: true
+        required: true,
+        clavecompleja: true
     },
     password2: {
         required: true,
@@ -142,7 +143,8 @@ messages: {
     dni: {
         required: 'Debes escribir tu CIF / NIF',
         nifES: 'Debes escribir un NIF válido',
-        cifEs: 'Debes escribir un CIF válido'
+        cifEs: 'Debes escribir un CIF válido',
+        remote: 'Este NIF ya está registrado'
     },
     nomempresa: {
         required: 'Debes escribir el nombre'
@@ -175,12 +177,28 @@ messages: {
         required: 'Usuario requerido'
     },
     password: {
-        required: 'Contraseña requerida'
+        required: 'Contraseña requerida',
+        clavecompleja: 'La contraseña debe tener un mínimo de complejidad.'
     },
     password2: {
         required: 'Debes validar la contraseña',
         equalTo: 'Las contraseñas no coinciden'
     }
+},
+submitHandler: function(){
+    var usuario = $('#user').val();
+    var cuota = $('select[name="formapago"]').val();
+    var aceptar = confirm('El usuario '+usuario+' se va a dar de alta con la cuota de '+cuota+'€. ¿Es correcto?');
+    if (aceptar === true){
+        alert('¡Enviado! ' + usuario);
+    form.submit();
+    }
+    else
+    {
+        alert('El alta se ha cancelado.');
+    }
+    
 }
 
+});
 });
