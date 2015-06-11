@@ -38,8 +38,8 @@ rules: {
     email: {
         email: true,
         required: true,
-        //remote: 'http://localhost/juanda/proyecto_ajax/validar_email_db.php',
-	        remote: 'php/validar_email_db.php',
+        remote: 'http://localhost/juanda/proyecto_ajax/validar_email_db.php',
+        //remote: 'php/validar_email_db.php',
         minlength: 4
     },
     email2: {
@@ -68,8 +68,8 @@ rules: {
             }
         },
         required: true,
-        //remote: 'http://localhost/juanda/proyecto_ajax/validar_nif_db.php'
-        	remote: 'php/validar_nif_db.php',
+        remote: 'http://localhost/juanda/proyecto_ajax/validar_nif_db.php'
+            //remote: 'php/validar_nif_db.php',
     },
     nomempresa: {
         required: true
@@ -81,8 +81,8 @@ rules: {
         required: true,
         maxlength: 5,
         number: true,
-        //remote: 'http://localhost/juanda/proyecto_ajax/validar_CodPostal_db.php'
-        	remote: 'php/validar_CodPostal_db.php',
+        remote: 'http://localhost/juanda/proyecto_ajax/validar_CodPostal_db.php'
+            //remote: 'php/validar_CodPostal_db.php',
     },
     localidad: {
         required: true
